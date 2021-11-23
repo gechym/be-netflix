@@ -134,7 +134,7 @@ const getCheckOutSession = catchAsync( async (req, res, next) => {
     const session = await stripe.checkout.sessions.create({
         payment_method_types : ['card'],
         success_url:`http://localhost:8000/api/v1/users/setMenbership/${user.id}`,//Nếu Người dụng Thanh toán thành công thì chuyển hướng theo đường link, kèm th để lưu vào đb
-        cancel_url: `http://localhost:3000/`, // về trang họ định chọn
+        cancel_url: `http://localhost:3006/`, // về trang họ định chọn
         customer_email : user.email, //Để Dùng sao này không bắt người dùng nhập lại
         client_reference_id : user.id, //  
 
