@@ -163,7 +163,7 @@ const setMenbership = catchAsync(async (req, res, next) => {
     user.membership = true
     await user.save({validateBeforeSave : false})
 
-    res.redirect('http://localhost:3000/')
+    res.redirect('http://localhost:3006/')
 })
 
 
